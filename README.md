@@ -10,12 +10,12 @@
 
 # Current Issues
 
-- No way to enforce slug uniqueness
+- Sluggable package can't properly check uniqueness of model's slug
 - No way to find a model by its translation in a practical way
 
 # Notes
 ## whereTranslations()
 The [spatie/laravel-translatable](https://github.com/spatie/laravel-translatable) package lacks of a whereTranslations() method that works with MariaDB and MySQL < 5.7
 
-Current solution is not optimal (cf [Post.php](https://github.com/mydnic/Laravel-Multilingual-SEO-Example-V2/blob/master/app/Post.php))
+Current solution is not optimal (cf [Post.php](https://github.com/mydnic/Laravel-Multilingual-SEO-Example-V2/blob/master/app/Post.php#L22))
 

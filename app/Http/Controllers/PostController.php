@@ -62,6 +62,7 @@ class PostController extends Controller
     {
         $post = Post::whereTranslation('slug', $slug)->first();
 
+        // Update Slug in URL on the fly
         $translatedSlug = $post->getTranslationWithoutFallback('slug', app()->getLocale());
         if (!empty($translatedSlug) and $translatedSlug !== $slug) {
             return redirect()->route('posts.show', $translatedSlug);
@@ -90,6 +91,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        // Force the Slug to be re-generated for new locale
         if (empty($post->getTranslationWithoutFallback('slug', app()->getLocale()))) {
             $post->slug = null;
         }
