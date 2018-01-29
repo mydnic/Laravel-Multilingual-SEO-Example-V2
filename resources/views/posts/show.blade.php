@@ -11,6 +11,14 @@
                 <div class="card-body">
                     {!! $post->content !!}
                 </div>
+                @auth
+                    <div class="card-footer text-right">
+                        <a href="{{ route('posts.edit', $post) }}" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-edit"></i>
+                            @lang('posts.edit.title')
+                        </a>
+                    </div>
+                @endauth
             </div>
         </div>
     </div>

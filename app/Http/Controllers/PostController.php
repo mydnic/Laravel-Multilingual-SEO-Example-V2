@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->get();
 
         return view('posts.index', compact('posts'));
     }
@@ -58,8 +58,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($slug)
     {
+        $post = Post::whereTranslation('slug', $slug)->first();
+
         return view('posts.show', compact('post'));
     }
 
@@ -98,6 +100,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('post.index');
+        return redirect()->route('posts.index');
     }
 }

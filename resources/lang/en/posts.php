@@ -10,6 +10,9 @@ return [
         'title_placeholder' => 'Some title...',
         'content_placeholder' => 'Content of your article'
     ],
+    'edit' => [
+        'title' => 'Edit'
+    ],
     'attributes' => [
         'title' => 'Title',
         'content' => 'Content'

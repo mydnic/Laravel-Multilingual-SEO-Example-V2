@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ce409e2aeddaaafd22394a692fb9e9f",
+    "content-hash": "85e89eef69092e5bfb50afaf48d5e758",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1384,6 +1384,79 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "spatie/laravel-translatable",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-translatable.git",
+                "reference": "1f6fb0507a5dcb6d6d0bf3aefe1e67a117bf697d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/1f6fb0507a5dcb6d6d0bf3aefe1e67a117bf697d",
+                "reference": "1f6fb0507a5dcb6d6d0bf3aefe1e67a117bf697d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "~3.5.0",
+                "phpunit/phpunit": "^6.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Translatable\\TranslatableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Translatable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "theMohamedSaid@gmail.com",
+                    "role": "Original idea"
+                }
+            ],
+            "description": "A trait to make an Eloquent model hold translations",
+            "homepage": "https://github.com/spatie/laravel-translatable",
+            "keywords": [
+                "eloquent",
+                "i8n",
+                "laravel-translatable",
+                "model",
+                "multilingual",
+                "spatie",
+                "translate"
+            ],
+            "time": "2018-01-24T14:48:27+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -69,16 +68,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Locale Configuration
+    | Application Available Locales
     |--------------------------------------------------------------------------
-    |
-    | The application locale determines the default locale that will be used
-    | by the translation service provider. You are free to set this value
-    | to any of the locales which will be supported by the application.
-    |
-    */
+     */
 
-    'locale' => 'en',
+    'locales' => [
+        'en' => 'English',
+        'fr' => 'Français',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -137,7 +134,6 @@ return [
     */
 
     'providers' => [
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -176,7 +172,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -191,7 +186,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -225,7 +219,5 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
-
 ];

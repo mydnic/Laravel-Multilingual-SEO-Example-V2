@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'login' => 'Login',
-    'register' => 'Register',
+    'login' => 'Connexion',
+    'register' => 'Inscription',
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Ces identifiants ne correspondent pas à nos enregistrements',
+    'throttle' => 'Tentatives de connexion trop nombreuses. Veuillez essayer de nouveau dans :seconds secondes.',
 ];
