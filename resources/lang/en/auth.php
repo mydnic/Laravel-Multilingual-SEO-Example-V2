@@ -13,6 +13,7 @@ return [
     */
 
     'login' => 'Login',
+    'logout' => 'Logout',
     'register' => 'Register',
 
     'failed' => 'These credentials do not match our records.',

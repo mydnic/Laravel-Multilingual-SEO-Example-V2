@@ -49,7 +49,7 @@ class PostController extends Controller
     {
         $post = Post::create($request->all());
 
-        return redirect()->route('posts.show', $post);
+        return redirect()->route('posts.show', $post->slug);
     }
 
     /**
@@ -61,6 +61,11 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::whereTranslation('slug', $slug)->first();
+
+        $translatedSlug = $post->getTranslationWithoutFallback('slug', app()->getLocale());
+        if (!empty($translatedSlug) and $translatedSlug !== $slug) {
+            return redirect()->route('posts.show', $translatedSlug);
+        }
 
         return view('posts.show', compact('post'));
     }
@@ -85,6 +90,10 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        if (empty($post->getTranslationWithoutFallback('slug', app()->getLocale()))) {
+            $post->slug = null;
+        }
+
         $post->update($request->all());
 
         return back();

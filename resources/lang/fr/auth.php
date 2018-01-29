@@ -13,6 +13,7 @@ return [
     */
 
     'login' => 'Connexion',
+    'logout' => 'Déconnexion',
     'register' => 'Inscription',
 
     'failed' => 'Ces identifiants ne correspondent pas à nos enregistrements',

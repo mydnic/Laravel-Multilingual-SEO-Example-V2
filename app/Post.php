@@ -20,9 +20,9 @@ class Post extends Model
 
     public static function whereTranslation($field, $value)
     {
-        return static::where($field, json_encode([
-            app()->getLocale() => $value
-        ]));
+        // Support for MariaDB and Mysql < 5.7
+        // Still not optimal solution ...
+        return static::where($field, 'like', '%' . $value . '%');
     }
 
     /**
@@ -37,15 +37,5 @@ class Post extends Model
                 'source' => 'title'
             ]
         ];
-    }
-
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'slug';
     }
 }
