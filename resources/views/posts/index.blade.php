@@ -2,15 +2,18 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-8">
             <h1>{{ trans('posts.list.title') }}</h1>
 
             @foreach($posts as $post)
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{ $post->title }}</div>
-
-                    <div class="panel-body">
+                <div class="card">
+                    <div class="card-header">
+                        <a href="{{ route('post.show', $post) }}">
+                            {{ $post->title }}
+                        </a>
+                    </div>
+                    <div class="card-body">
                         {!! $post->content !!}
                     </div>
                 </div>
