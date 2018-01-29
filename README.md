@@ -19,3 +19,16 @@ The [spatie/laravel-translatable](https://github.com/spatie/laravel-translatable
 
 Current solution is not optimal (cf [Post.php](https://github.com/mydnic/Laravel-Multilingual-SEO-Example-V2/blob/master/app/Post.php#L22))
 
+# Installation
+
+- ```git clone``` this repo
+- run ```composer install```
+- copy the ```.env.example``` file to ```.env``` file
+- Set your database credentials in the ```.env``` file
+- run ```php artisan key:generate```
+- run ```php artisan migrate```
+
+- Visit the app with Valet/Homestead/whatever
+- Register an account
+- Create a new post
+- Edit this Post in another language by using the language switcher on the Edit Form Page
