@@ -14,10 +14,6 @@ class Post extends Model
 
     public $translatable = ['title', 'slug', 'content'];
 
-    protected $casts = [
-        'slug' => 'array',
-    ];
-
     public static function whereTranslation($field, $value)
     {
         // Support for MariaDB and Mysql < 5.7
